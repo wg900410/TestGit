@@ -9,10 +9,10 @@ def split(srcfile, todir, chunksize=chunksize):
     else:
         for fname in os.listdir(todir):
             os.remove(os.path.join(todir, fname))
-    partnum = 0
-    fullsize = os.path.getsize(srcfile)  # 计算被切割文件的大小
-    filesize = 0
-    f_input = open(srcfile, 'rb')
+    # partnum = 0
+    # fullsize = os.path.getsize(srcfile)  # 计算被切割文件的大小
+    # filesize = 0
+    # f_input = open(srcfile, 'rb')
     while True:
         filesize += chunksize
         chunk = f_input.read(chunksize)  # 以chunksize大小从被切割文件中读取
